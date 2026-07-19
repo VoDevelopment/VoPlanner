@@ -9,44 +9,50 @@ body {
     background: #f8f9fa;
     color: #1a1a2e;
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
+    width: 100%;
 }
 
-/* ====== Navigation ====== */
+/* ====== Navigation - Mobile First ====== */
 nav {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 16px 0;
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 24px;
+    gap: 8px;
+    font-size: 20px;
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .logo-icon {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .logo-text {
@@ -58,79 +64,91 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 16px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #1a1a2e;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     transition: color 0.3s;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
     color: #4A90D9;
 }
 
-/* ====== Hero ====== */
+/* ====== Hero - Mobile First ====== */
 .hero {
-    padding: 80px 0 60px;
+    padding: 40px 0 30px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    width: 100%;
+    text-align: center;
 }
 
 .hero-badge {
     display: inline-block;
     background: rgba(74, 144, 217, 0.1);
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 12px;
     color: #4A90D9;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
+    line-height: 1.2;
+    margin-bottom: 12px;
 }
 
 .hero-description {
-    font-size: 18px;
+    font-size: 15px;
     color: #555;
-    margin-bottom: 32px;
-    max-width: 500px;
+    margin-bottom: 24px;
+    max-width: 100%;
+    padding: 0 4px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 16px;
-    margin-bottom: 40px;
+    gap: 12px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
-    padding: 14px 32px;
+    padding: 12px 24px;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     transition: all 0.3s;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    flex-shrink: 0;
 }
 
 .btn-primary {
@@ -158,99 +176,110 @@ nav {
 
 .hero-stats {
     display: flex;
-    gap: 40px;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .stat-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .stat-number {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
     color: #4A90D9;
 }
 
 .stat-label {
-    font-size: 14px;
+    font-size: 12px;
     color: #777;
 }
 
-/* ====== Phone Mockup ====== */
+/* ====== Phone Mockup - Mobile First ====== */
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .phone-mockup {
-    width: 280px;
-    height: 560px;
+    width: 200px;
+    height: 400px;
     background: #1a1a2e;
-    border-radius: 40px;
-    padding: 12px;
+    border-radius: 30px;
+    padding: 10px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    margin: 0 auto;
+    flex-shrink: 0;
 }
 
 .phone-screen {
     width: 100%;
     height: 100%;
     background: #f8f9fa;
-    border-radius: 30px;
+    border-radius: 22px;
     overflow: hidden;
-    padding: 20px;
+    padding: 16px;
 }
 
 .app-preview {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .preview-header {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     color: #1a1a2e;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .preview-item {
-    padding: 12px 16px;
+    padding: 8px 12px;
     background: white;
-    border-radius: 12px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    font-size: 14px;
+    font-size: 11px;
     color: #1a1a2e;
 }
 
-/* ====== Features ====== */
+/* ====== Features - Mobile First ====== */
 .features {
-    padding: 80px 0;
+    padding: 40px 0;
     background: white;
+    width: 100%;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 30px;
 }
 
 .section-header h2 {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .section-header p {
     color: #777;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
 }
 
 .feature-card {
-    padding: 30px;
+    padding: 20px;
     background: #f8f9fa;
-    border-radius: 16px;
+    border-radius: 14px;
     text-align: center;
     transition: all 0.3s;
 }
@@ -261,170 +290,181 @@ nav {
 }
 
 .feature-icon {
-    font-size: 40px;
-    margin-bottom: 16px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .feature-card h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 4px;
 }
 
 .feature-card p {
     color: #777;
-    font-size: 14px;
+    font-size: 13px;
 }
 
-/* ====== Download ====== */
+/* ====== Download - Mobile First ====== */
 .download {
-    padding: 80px 0;
+    padding: 40px 0;
     background: linear-gradient(135deg, #f8f9fa, #e8f0fe);
+    width: 100%;
 }
 
 .download-content {
     text-align: center;
+    width: 100%;
 }
 
 .download-content h2 {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .download-content>p {
     color: #777;
-    font-size: 18px;
-    margin-bottom: 40px;
+    font-size: 15px;
+    margin-bottom: 30px;
 }
 
 .download-options {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .download-card {
     background: white;
-    padding: 40px;
-    border-radius: 20px;
+    padding: 28px 20px;
+    border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
-    max-width: 320px;
-    flex: 1;
+    max-width: 100%;
+    width: 100%;
 }
 
 .download-icon {
-    font-size: 60px;
-    margin-bottom: 16px;
+    font-size: 48px;
+    margin-bottom: 12px;
 }
 
 .download-card h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
+    font-size: 20px;
+    margin-bottom: 6px;
 }
 
 .download-card p {
     color: #777;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
+    font-size: 14px;
 }
 
 .download-btn {
-    font-size: 18px;
-    padding: 16px 40px;
+    font-size: 16px;
+    padding: 14px 32px;
 }
 
 .version-info {
-    margin-top: 12px;
-    font-size: 12px;
+    margin-top: 10px;
+    font-size: 11px;
     color: #aaa;
 }
 
-/* ====== Install Instructions ====== */
+/* ====== Install Instructions - Mobile First ====== */
 .install-instructions {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
     background: white;
-    padding: 30px;
-    border-radius: 16px;
+    padding: 20px;
+    border-radius: 14px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
 }
 
 .install-instructions h4 {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 18px;
+    margin-bottom: 12px;
 }
 
 .install-instructions ol {
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 .install-instructions li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #555;
+    font-size: 14px;
 }
 
 .security-note {
-    margin-top: 16px;
-    padding: 12px 16px;
+    margin-top: 12px;
+    padding: 10px 14px;
     background: #e8f5e9;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     color: #2e7d32;
 }
 
-/* ====== About ====== */
+/* ====== About - Mobile First ====== */
 .about {
-    padding: 60px 0;
+    padding: 40px 0;
     background: white;
+    width: 100%;
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 0 4px;
 }
 
 .about-content h2 {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 800;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .about-content>p {
     color: #555;
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 15px;
+    margin-bottom: 24px;
 }
 
 .about-features {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .about-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px;
+    font-size: 15px;
     color: #555;
 }
 
-/* ====== Footer ====== */
+/* ====== Footer - Mobile First ====== */
 footer {
     background: #1a1a2e;
     color: white;
-    padding: 40px 0 20px;
+    padding: 30px 0 16px;
+    width: 100%;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .footer-logo .logo-text {
@@ -435,20 +475,22 @@ footer {
 
 .footer-logo p {
     color: #aaa;
-    margin-top: 8px;
+    margin-top: 4px;
+    font-size: 13px;
 }
 
 .footer-links h4,
 .footer-contact h4 {
-    margin-bottom: 12px;
-    font-size: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .footer-links a {
-    display: block;
+    display: inline-block;
     color: #aaa;
     text-decoration: none;
-    margin-bottom: 8px;
+    margin: 0 8px 4px;
+    font-size: 13px;
     transition: color 0.3s;
 }
 
@@ -458,72 +500,93 @@ footer {
 
 .footer-contact p {
     color: #aaa;
-    margin-bottom: 8px;
-}
-
-.footer-contact a {
-    color: #4A90D9;
-    text-decoration: none;
+    margin-bottom: 4px;
+    font-size: 13px;
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
+    padding-top: 16px;
     text-align: center;
     color: #777;
-    font-size: 14px;
+    font-size: 12px;
 }
 
-/* ====== Responsive ====== */
-@media (max-width: 1024px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+/* ====== Tablet ====== */
+@media (min-width: 600px) {
+    .hero-title {
+        font-size: 36px;
     }
-
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
+    
     .phone-mockup {
         width: 240px;
         height: 480px;
     }
-
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+    
+    .download-card {
+        max-width: 320px;
+        width: auto;
     }
-
+    
+    .about-features {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
     .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
+        gap: 30px;
     }
 }
 
-@media (max-width: 600px) {
+/* ====== Desktop ====== */
+@media (min-width: 1024px) {
+    .hero-container {
+        flex-direction: row;
+        gap: 60px;
+        text-align: left;
+    }
+    
+    .hero-content {
+        text-align: left;
+    }
+    
     .hero-title {
-        font-size: 32px;
+        font-size: 48px;
     }
-
-    .nav-links {
-        display: none;
+    
+    .hero-description {
+        max-width: 500px;
     }
-
+    
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    
+    .hero-stats {
+        justify-content: flex-start;
+    }
+    
     .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .about-features {
-        flex-direction: column;
-        align-items: center;
+    
+    .phone-mockup {
+        width: 280px;
+        height: 560px;
+    }
+    
+    .download-card {
+        max-width: 320px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
     }
 }
