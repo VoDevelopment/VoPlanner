@@ -33,6 +33,3 @@ document.querySelectorAll('.feature-card, .download-card').forEach(el => {
     el.style.transition = 'all 0.6s ease-out';
     observer.observe(el);
 });
-
-// Mobile menu toggle (optional)
-// You can add mobile menu functionality here if needed
